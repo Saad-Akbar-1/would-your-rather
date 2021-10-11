@@ -31,10 +31,8 @@ export function addQuestionAnswer (authedUser, qid, answer) {
 }
 export function handleSaveQuestion(optionOneText, optionTwoText, author) {
     return dispatch => {
-        console.log("IN handle Save Question" , optionOneText, optionTwoText)
         return saveQuestion({ optionOneText, optionTwoText, author }).then(
             (question) => {
-            console.log("After saving question" , question)
             dispatch(addQuestion(question));
             dispatch(addUserQuestion(question));
             }

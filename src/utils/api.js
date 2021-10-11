@@ -15,7 +15,6 @@ import {
   }
   
   export function saveQuestion(question) {
-    console.log("Question object inside API" , question)
     return _saveQuestion(question);
   }
   

@@ -31,7 +31,6 @@ class Question extends Component {
       const totalVotes = question.optionOne.votes.length + question.optionTwo.votes.length
       const {isAnswered} = this.state
       return (
-        console.log(question),
           <div>
               {isAnswered === true ? (
                 <div>
