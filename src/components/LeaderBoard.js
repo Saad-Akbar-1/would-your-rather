@@ -1,8 +1,6 @@
 import React from 'react'
-import { useEffect , useState} from 'react';
 import { connect } from 'react-redux'
 import Avatar from '@mui/material/Avatar';
-import StyledBadge from '@material-ui/core/Badge'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';

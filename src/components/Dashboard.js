@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Avatar from '@mui/material/Avatar';
-import StyledBadge from '@material-ui/core/Badge'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
@@ -34,7 +33,7 @@ class Dashboard extends Component {
                                 </IconButton>
                             }>
                             
-                            <ListItemAvatar>
+                            <ListItemAvatar key= {question.id}>
                                 <Avatar alt={question.author} src={typeof(question.author) === 'object' ? question.author.avatarURL : users[question.author].avatarURL } />
                             </ListItemAvatar>
                             <ListItemText primary="Would you rather" secondary={<React.Fragment>
