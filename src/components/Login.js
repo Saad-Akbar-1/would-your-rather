@@ -8,6 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import { setAuthedUser } from '../actions/authedUser';
+import { Redirect } from 'react-router-dom';
 
 import IconButton from '@mui/material/IconButton';
 import FolderIcon from '@material-ui/icons/Folder';
@@ -32,8 +33,10 @@ class Login extends Component {
     };
     handleClick = (user) => {
         const { setAuthedUser } = this.props;
-
         setAuthedUser(user)
+        return <Redirect to='/'/>
+        
+        
     }
   
     render() {
@@ -65,7 +68,7 @@ class Login extends Component {
 function mapStateToProps({ users }) {
     return {
       users: Object.values(users)
-    };
+    }
 }
 
 export default connect(mapStateToProps,{setAuthedUser})(Login)
